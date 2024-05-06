@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Button } from './Button';
 
 type Props = {
     children: React.ReactNode;
@@ -9,12 +10,9 @@ export const Collapse = ({ children }: Props) => {
 
     return (
         <div className='flex justify-center items-center gap-2'>
-            <div
-                onClick={() => setIsCollapsed(!isCollapsed)}
-                className='py-2 px-4 rounded-lg bg-blue-700 text-white hover:bg-blue-950 cursor-pointer'
-            >
+            <Button onClick={() => setIsCollapsed(!isCollapsed)}>
                 {isCollapsed ? 'Show' : 'Hide'}
-            </div>
+            </Button>
             {!isCollapsed && children}
         </div>
     );

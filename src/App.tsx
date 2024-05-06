@@ -5,7 +5,11 @@ function App() {
     return (
         <div className='App'>
             <div className='App'>
-                <CustomTableBuilder data={TEST_DATA} />
+                <CustomTableBuilder
+                    showCaptionByDefault={true}
+                    data={TEST_DATA}
+                    caption='Tennis Racket Stats'
+                />
             </div>
         </div>
     );
