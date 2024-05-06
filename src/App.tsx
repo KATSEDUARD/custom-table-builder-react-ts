@@ -8,7 +8,7 @@ function App() {
                 <CustomTableBuilder
                     showCaptionByDefault={true}
                     data={TEST_DATA}
-                    caption='Tennis Racket Stats'
+                    caption='Tennis Racket Properties'
                 />
             </div>
         </div>
