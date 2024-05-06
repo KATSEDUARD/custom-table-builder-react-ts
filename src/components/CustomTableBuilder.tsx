@@ -1,7 +1,6 @@
 import { Collapse } from './Collapse';
 import { CustomTableData } from '../types/CustomTableData';
 import { useState } from 'react';
-import React from 'react';
 import { Button } from './Button';
 
 type Props = {
@@ -18,9 +17,12 @@ export const CustomTableBuilder = ({
     const [showCaption, setShowCaption] = useState(showCaptionByDefault);
 
     return (
-        <div className='flex flex-col justify-center'>
+        <div className='flex flex-col justify-center mt-4'>
             {showCaptionByDefault && (
-                <Button onClick={() => setShowCaption(!showCaption)}>
+                <Button
+                    className='w-32 m-auto mb-4'
+                    onClick={() => setShowCaption(!showCaption)}
+                >
                     {showCaption ? 'Caption Off' : 'Caption On'}
                 </Button>
             )}
